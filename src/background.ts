@@ -36,7 +36,7 @@ async function handleWalletCommunication(
       func:
         async () => {
           // @ts-ignore
-          const provider = window.aptos;
+          const provider = window.razor.aptos;
           const res = await provider.connect();
           return res.address.toString();
         }
@@ -83,7 +83,7 @@ async function handleWalletCommunication(
             // })
 
             // @ts-ignore
-            await window.aptos.signAndSubmitTransaction(JSON.parse(transaction));
+            await window.razor.aptos.signAndSubmitTransaction(JSON.parse(transaction));
 
           console.log('result', res);
           return res;
