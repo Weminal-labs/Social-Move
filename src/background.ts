@@ -83,7 +83,8 @@ async function handleWalletCommunication(
             // })
 
             // @ts-ignore
-            await window.razor.aptos.signAndSubmitTransaction(JSON.parse(transaction));
+
+            await window.razor.aptos.signAndSubmitTransaction({payload: JSON.parse(transaction)});
 
           console.log('result', res);
           return res;
