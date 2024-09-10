@@ -98,7 +98,7 @@ export class ActionsRegistry {
       const host = urlObj.host;
       return this.actionsByHost[host] ?? null;
     } catch (e) {
-      console.error(`[ActionX] Failed to lookup action for URL: ${url}`, e);
+      console.error(`[SocialMove] Failed to lookup action for URL: ${url}`, e);
       return null;
     }
   }
@@ -109,7 +109,7 @@ export class ActionsRegistry {
       const host = urlObj.host;
       return this.websitesByHost[host] ?? null;
     } catch (e) {
-      console.error(`[ActionX] Failed to lookup website for URL: ${url}`, e);
+      console.error(`[SocialMove] Failed to lookup website for URL: ${url}`, e);
       return null;
     }
   }
@@ -121,7 +121,7 @@ export class ActionsRegistry {
       return this.interstitialsByHost[host] ?? null;
     } catch (e) {
       console.error(
-        `[ActionX] Failed to lookup interstitial for URL: ${url}`,
+        `[SocialMove] Failed to lookup interstitial for URL: ${url}`,
         e,
       );
       return null;
@@ -191,7 +191,7 @@ async function fetchActionsRegistryConfig(): Promise<ActionsRegistryConfig> {
 
     if (!response.ok) {
       console.error(
-        '[ActionX] Failed to fetch actions registry config',
+        '[SocialMove] Failed to fetch actions registry config',
         await response.json(),
       );
       return { actions: [], interstitials: [], websites: [] };
@@ -199,7 +199,7 @@ async function fetchActionsRegistryConfig(): Promise<ActionsRegistryConfig> {
 
     return await response.json();
   } catch (e) {
-    console.error('[ActionX] Failed to fetch actions registry config', e);
+    console.error('[SocialMove] Failed to fetch actions registry config', e);
     return { actions: [], interstitials: [], websites: [] };
   }
 }

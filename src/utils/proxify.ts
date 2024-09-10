@@ -2,7 +2,7 @@ let proxyUrl: string | null = 'https://proxy.dial.to';
 
 export function setProxyUrl(url: string): void {
   if (!url) {
-    console.warn('[ActionX] Proxy URL is not set, proxy will be disabled');
+    console.warn('[SocialMove] Proxy URL is not set, proxy will be disabled');
     proxyUrl = null;
     return;
   }
@@ -10,7 +10,7 @@ export function setProxyUrl(url: string): void {
   try {
     new URL(url);
   } catch (e) {
-    console.warn('[ActionX] Invalid proxy URL', e);
+    console.warn('[SocialMove] Invalid proxy URL', e);
     return;
   }
 

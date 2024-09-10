@@ -37,7 +37,7 @@ export function isInterstitial(url: string | URL): IsInterstitialResult {
     };
   } catch (e) {
     console.error(
-      `[ActionX] Failed to check if URL is interstitial: ${url}`,
+      `[SocialMove] Failed to check if URL is interstitial: ${url}`,
       e,
     );
     return { isInterstitial: false };
