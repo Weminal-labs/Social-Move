@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
-import PetraLogo from '../assets/PetraLogo';
+import RazorLogo from '../assets/RazorLogo';
 import ArrowFromSquareIcon from '../icons/ArrowFromSquareIcon';
 import { Checkbox } from './Checkbox';
 
 enum Wallets {
-  Petra = 'petra',
+  Razor = 'razor',
 }
 interface WalletProps {
   title: string;
@@ -98,16 +98,16 @@ export const WalletSelector = ({
     setSelectedWallet(null);
     chrome.storage.local.remove('selectedWallet');
   }
-  const isWalletPetra = selectedWallet === Wallets.Petra;
+  const isWalletRazor = selectedWallet === Wallets.Razor;
   return (
     <div className="flex flex-col flex-1 gap-2 w-full">
       <WalletSelect
-        isSelected={isWalletPetra}
-        title="Petra"
-        subtitle="Blinks are also natively supported in Petra"
-        icon={<PetraLogo />}
+        isSelected={isWalletRazor}
+        title="Razor"
+        subtitle="Blinks are also natively supported in Razor"
+        icon={<RazorLogo />}
         onChange={(isChecked: boolean) =>
-          isChecked ? selectWallet(Wallets.Petra) : unselectWallet()
+          isChecked ? selectWallet(Wallets.Razor) : unselectWallet()
         }
       />
     </div>
