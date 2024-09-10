@@ -15,9 +15,9 @@ export async function signTransaction(transaction: any) {
 
     const finalTransaction = {
       function: data.function,
-      type_arguments: data.typeArguments,
+      typeArguments: data.typeArguments,
       type: 'entry_function_payload',
-      arguments: data.functionArguments,
+      functionArguments: data.functionArguments,
     };
 
     // Gửi tin nhắn đến Chrome extension để thực hiện ký giao dịch
