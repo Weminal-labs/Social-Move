@@ -1,4 +1,4 @@
-# blinks-chrome-extension
+# SocialMove Chrome Extension
 
 > a chrome extension tools built with Vite + React, and Manifest v3
 
@@ -13,7 +13,7 @@
 run the command
 
 ```shell
-$ cd blinks-chrome-extension
+$ cd Social-Move
 
 $ npm run dev
 ```
